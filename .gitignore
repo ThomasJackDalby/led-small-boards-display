@@ -1,0 +1,9 @@
+# python
+.venv
+
+# data folders
+images/
+font/
+
+# font files
+**/*.ttf
