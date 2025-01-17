@@ -1,3 +1,5 @@
+# code.py - test script to just turn an LED on/off
+
 import board
 import digitalio
 import time

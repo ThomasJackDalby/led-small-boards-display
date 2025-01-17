@@ -3,7 +3,7 @@
 
 # data folders
 images/
-font/
+fonts/
 
 # font files
 **/*.ttf
