@@ -1,6 +1,18 @@
 import machine
 from neopixel import NeoPixel
 
+class LedFont:
+
+    def __init__(self, data):
+        self.data = data
+
+    def get_mask(self, char):
+        return self.data[char]["m"]
+
+def load_font(file_path):
+    pass
+    # loads font from json
+
 class LedDisplay:
     def __init__(self, pin, rows=8, columns=8, boards=1):
         self.rows_per_board = rows
@@ -33,6 +45,19 @@ class LedDisplay:
             index += self.rows_per_board
             self.strip[index] = color
             x += 1
+
+    def draw_text(self, x, y, font, text, stroke):
+        for char in text:
+            char_data = font.get_char(char)
+            left, top, right, bottom = char_data.get_bbox()
+            # unfinished
+            for value in char_data.mask:
+                if value:
+                    self.set_pixel(x, y, stroke)
+                x += 1
+                if x >= right: x = left
+
+
     
     
 
