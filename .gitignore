@@ -5,5 +5,7 @@
 images/
 fonts/
 
+.libraries/
+
 # font files
 **/*.ttf

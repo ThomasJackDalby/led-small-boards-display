@@ -1,10 +1,9 @@
 # code.py - test script to just turn an LED on/off
 
-import board
 import digitalio
 import time
 
-led = digitalio.DigitalInOut(board.LED)
+led = digitalio.DigitalInOut(machine.Pin.board.LED)
 led.direction = digitalio.Direction.OUTPUT
 
 while True:
